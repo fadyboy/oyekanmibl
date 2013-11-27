@@ -1,0 +1,21 @@
+<!-- Inherit from the inventory/base.html -->
+{% extends "inventory/base.html" %}
+
+{% block content %}
+
+{{message}}
+{% csrf_token %}
+<ul id="menu">
+	<li id="menuItem"><a href="{% url 'addproduct' %}">Add Product</a></li>
+	<li id="menuItem"><a href="{% url 'addcategory' %}">Add Category</a></li>
+	<li id="menuItem"><a href="{% url 'receiveproduct' %}">Receive Product</a></li>
+	<li id="menuItem"><a href="{% url 'issueproduct' %}">Issue Product</a></li>
+</ul>
+
+<p>
+	<ul>
+		<li id="logoutlnk"><a href="{% url 'mylogout' %}">Logout</a></li>
+	</ul>
+</p>
+
+{% endblock %}

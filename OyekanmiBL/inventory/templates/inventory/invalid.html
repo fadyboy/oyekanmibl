@@ -1,0 +1,15 @@
+<!-- inherit from inventory/base.html -->
+
+{% extends "inventory/base.html" %}
+
+
+
+{% block content %}
+
+{{message}}<br>
+{{username}}<br>
+
+
+<P>Your username and password are incorrect, please click <a href="/login/"><b>here</b></a> to try again
+
+{% endblock %}

@@ -1,0 +1,34 @@
+<!-- Add this section to reference base.html -->
+{% extends "inventory/base.html" %}
+{% block content %}
+{{message}}
+
+
+<!--
+<form id="home" action="/login/" method="post">
+	{% csrf_token %}
+	<!--{% if next  %}
+	<input type="hidden" name="next" value="{{next}}" />
+	{% endif %}-->
+	
+	<!--Username: <input type="text" id="lbl_username" name="username" value="{{username}}"> <br/>
+	Password: <input type="password" id="lbl_password" name="password" value=""> <br/>
+	<input type="submit" value="Log in">
+
+</form> 
+-->
+<p>
+<!-- Remove code block
+<ul id="menu_item">
+	<li><a href="{% url 'addproduct' %}">Add Product</a></li>
+	<li><a href="{% url 'addcategory' %}">Add Category</a></li>
+	<li><a href="{% url 'receiveproduct' %}">Receive Products</a></li>
+	<li><a href="{% url 'issueproduct' %}">Issue Products</a></li>
+</ul>
+-->
+
+<!-- Todo: add code to hide login message if user is logged in -->
+
+Please click <a href="/login/"><b>here</b></a> to login
+
+{% endblock %}

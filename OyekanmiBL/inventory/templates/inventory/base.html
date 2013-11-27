@@ -1,0 +1,77 @@
+{% load static %}
+
+<html>
+	<head>
+	
+		<title>{% block title %} Oyekanmi Brothers Limited {% endblock %}</title>
+        <!-- link to CSS file -->
+    <!-- using django admin Calendar widget CSS and javascript files-->
+
+
+    <!--<link rel="stylesheet" type="text/css" href="{% static "CSS/default.css" %}">-->
+    <link rel="stylesheet" type="text/css" href="{% static "admin/css/base.css" %}">
+    <link rel="stylesheet" type="text/css" href="{% static "admin/css/widgets.css" %}">
+    <link rel="stylesheet" type="text/css" href="{% static "CSS/default.css" %}">
+
+
+    <script type="text/javascript">window.__admin_media_prefix__= "/static/admin/";</script>
+
+    <script type="text/javascript" src="/admin/jsi18n/"></script>
+    <script type="text/javascript" src="{% static "admin/js/core.js" %}"></script>
+    <script type="text/javascript" src="{% static "admin/js/admin/RelatedObjectLookups.js" %}"></script>
+    <script type="text/javascript" src="{% static "admin/js/jquery.js" %}"></script>
+    <script type="text/javascript" src="{% static "admin/js/jquery.init.js" %}"></script>
+    <script type="text/javascript" src="{% static "admin/js/actions.js" %}"></script>
+    <script type="text/javascript" src="{% static "admin/js/calendar.js" %}"></script>
+    <script type="text/javascript" src="{% static "admin/js/admin/DateTimeShortcuts.js" %}"></script>
+
+
+    <!-- using custom jquery for calendar widget-->
+    <!--
+        <link rel="stylesheet" type="text/css" href="{% static "CSS/default.css" %}">
+        <script type="text/javascript" src="{% static "js/jquery-1.10.2.js" %}"></script>
+        <script type="text/javascript" src="{% static "js/jqueryui.js" %}"></script>
+        <script type="text/javascript" src="{% static "js/main.js" %}"></script>
+    -->
+
+	</head>
+	
+	<body>
+    <div id="main_header">
+        <a href="{% url 'loggedin' %}"><img src="{% static "images/chemicals.jpg" %}" alt="logo" id="main_logo"></a>
+		<h1 class="h1Header">Welcome to Oyekanmi Brothers Limited</h1>
+    </div>
+		<!-- define header code here? -->
+    <div id="left_sidebar">
+        {% block left_sidebar %}
+            <!--Left_sidebar content -->
+            <!--<a href="{% url 'admin' %}">Admin</a>-->
+
+        {% endblock %}
+    </div>
+
+    <div id="main_content">
+
+		{% block content %}
+		
+		{% endblock %}
+    </div>
+
+    <div id="right_sidebar">
+        {% block right_sidebar %}
+
+        {% endblock %}
+    </div>
+
+    <!-- footer -->
+    <div id="main_footer">
+        {% block main_footer %}
+         &copy Oyekanmi Brothers Limited {% now "Y" %}
+        {% endblock %}
+    </div>
+	
+	
+	</body>
+
+
+</html>

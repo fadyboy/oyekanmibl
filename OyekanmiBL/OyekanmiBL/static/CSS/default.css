@@ -1,0 +1,79 @@
+/* default css settings file */
+
+body {
+    text-align: center;
+    margin: 10;
+    padding: 10;
+
+
+}
+
+/* main header div */
+#main_header {
+    color: lightskyblue;
+    padding-bottom: 10px;
+    border-bottom: lightskyblue, thick;
+    border-bottom-style: solid;
+}
+/* main content div */
+#main_content{
+    font-family: arial;
+    padding-top: 20px;
+    padding: 10px;
+
+
+}
+
+#left_sidbar {
+    float: left;
+    width: 200px;
+}
+
+#right_sidebar {
+    float: right;
+    width: 200px;
+}
+
+/* Settings for links */
+a link, a:visited {
+    text-decoration: none;
+}
+
+a:hover{
+    color: lightskyblue;
+}
+
+/* main logo settings */
+img#main_logo{
+    width: 50px;
+    height: 50px;
+    float: left;
+    border: solid;
+    border-width: 2px;
+    border-color: lightskyblue;
+    margin-right: 10px;
+}
+
+.h1header{
+
+}
+
+/* main footer settings */
+#main_footer {
+    border-top-style: solid;
+    border-color: lightskyblue;
+    padding-top: 5px;
+
+}
+
+/* styles for un-ordered lists*/
+ul {
+    list-style: none;
+    text-align: left;
+}
+
+/* form headings */
+#frm_header {
+    color: lightskyblue;
+}
+

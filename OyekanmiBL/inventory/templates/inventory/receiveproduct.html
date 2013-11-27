@@ -1,0 +1,43 @@
+<!-- add extend code block to inherit base.html -->
+{% extends "inventory/base.html"  %}
+
+{% block content %}
+
+<!--{{message}}-->
+<!--Place link to admin module -->
+<p>
+<ul>
+    <li id="admin_link"><a href="{% url 'admin' %}" target="_blank">Admin</a> </li>
+</ul>
+</p>
+
+<!--Submenu header section -->
+<a href="{% url 'addproduct' %}" class="submenu_header">Add Product</a>
+<a href="{% url 'addcategory' %}" class="submenu_header">Add Category</a>
+<a href="{% url 'receiveproduct' %}" class="submenu_header">Receive Products</a>
+<a href="{% url 'issueproduct' %}" class="submenu_header">Issue Products</a>
+<!--<a href="{% url 'view_product' %}" class="submenu_header">Edit Product details</a>-->
+
+<h3 id="frm_header">Receive Products</h3>
+
+<form method="post" action="{% url 'receiveproduct' %}">
+{% csrf_token %}
+{{ form.as_p }}
+
+<input type="submit" value="Save">
+
+<!-- display success message when form saved -->
+<p id="frm_message">
+{{ message }}
+
+</p>
+
+</form>
+
+<p>
+	<ul>
+		<li id="logoutlnk"><a href="{% url 'logout' %}">Logout</a></li>
+	</ul>
+</p>
+
+{% endblock %}

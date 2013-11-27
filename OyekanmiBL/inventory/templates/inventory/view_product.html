@@ -1,0 +1,16 @@
+<!-- add code to inherit from base.html -->
+{% extends "inventory/base.html" %}
+
+{% block content %}
+
+<form method="post" action="{% url "view_product" %}">
+<!-- Add csrf token for security-->
+{% csrf_token %}
+<!-- render form as paragraph -->
+{{ form.as_p }}
+
+<input type="submit" value="Save">
+
+</form>
+
+{% endblock %}

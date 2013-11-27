@@ -1,0 +1,29 @@
+<!-- inherit from inventory/base.html -->
+{% extends "inventory/base.html" %}
+
+{% block content %}
+
+{{message}}
+
+
+
+<div id="loggedin">
+Hello <b>{{logged_user}}</b>, you are now logged in. <!-- variables from views are passed in the html page in this format -->
+
+<p/>
+<ul id="menu_item">
+	<li><a href="{% url 'addproduct' %}">Add Product</a></li>
+	<li><a href="{% url 'addcategory' %}">Add Category</a></li>
+	<li><a href="{% url 'receiveproduct' %}">Receive Products</a></li>
+	<li><a href="{% url 'issueproduct' %}">Issue Products</a></li>
+</ul>
+
+<p>
+	<ul>
+		<li id="logoutlnk"><a href="{% url 'logout' %}">Logout</a></li>
+	</ul>
+</p>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,29 @@
+<!-- inherit from inventory/base.html -->
+
+{% extends "inventory/base.html" %}
+
+{% block content %}
+
+{% if form.errors %}
+
+<p class="frm_error"> Sorry, your password and username are not valid</p>
+
+{% endif %}
+
+<form action="/auth/" method="POST">
+<!--add csrf token to protect webforms -->
+{% csrf_token %}
+<!-- {% if next %}
+<input type="hidden" name="next" value="{{next}}" />
+{% endif %}
+-->
+
+
+Username: <input type="text" name="username" id="username" value=""><br/>
+Password: <input type="password" name="password" id="password" value=""><br/>
+<input type="submit" value="Login" id="login">
+
+</form>
+
+{% endblock %}
+
